@@ -1,0 +1,30 @@
+{
+    "FatalError": {
+        "currentScore": 0,
+        "BestScore": 0,
+        "Level1Enemy": 0,
+        "Level2Enemy": 0,
+        "Level3Enemy": 0
+    },
+    "OverClock": {
+        "currentScore": 0,
+        "BestScore": 0,
+        "Level1Enemy": 0,
+        "Level2Enemy": 0,
+        "Level3Enemy": 0
+    },
+    "Malware": {
+        "currentScore": 0,
+        "BestScore": 0,
+        "Level1Enemy": 0,
+        "Level2Enemy": 0,
+        "Level3Enemy": 0
+    },
+    "DDos": {
+        "currentScore": 0,
+        "BestScore": 0,
+        "Level1Enemy": 0,
+        "Level2Enemy": 0,
+        "Level3Enemy": 0
+    }
+}

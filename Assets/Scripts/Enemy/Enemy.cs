@@ -7,12 +7,13 @@ public class Enemy : MonoBehaviour
 {
 
     private float HP = 100f;
+    public int Level = 1;
     public float movementSpeed = 5f;
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        HP = 100f;
+        HP = 100f * Level;
         movementSpeed = 5f;
         StartCoroutine(ReturnObj());
     }
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour
 
     void ObjectDestroy()
     {
+        ScoreManager.Instance.EnemyDeath(Level);
         EnemyPool.ReturnObject(this);
     }
 

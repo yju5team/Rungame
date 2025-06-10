@@ -15,8 +15,8 @@ namespace GridScene
         [SerializeField]
         private float DashTime = 0.5f;
 
-        [SerializeField]
-        private float DashDistance = 5f;
+        //[SerializeField]
+        //private float DashDistance = 5f;
 
         public Vector3 MoveDirection { set; get; } = Vector3.zero;
         public bool IsMove { set; get; } = false;

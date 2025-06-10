@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-    public int score;
-
     public GameObject Player;
 
     private bool isgameEnd;
@@ -47,6 +45,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() //초기화
     {
+        ScoreManager.Instance.StartTimeScore();
         isgameEnd = false;
         UIManager.Instance.GameOverPanelActive(false);
     }
@@ -60,26 +59,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    // void StartTimeScore()
-    // {
-    //     StartCoroutine(TimeScore());
-    // }
-
-    // private IEnumerator TimeScore()
-    // {
-    //     while (true)
-    //     {
-    //         yield return new WaitForSeconds(0.1f);
-    //         score += 1;
-    //     }
-    // }
-
     public void GameOver()
     {
         isgameEnd = true;
         Time.timeScale = 0;
-        UIManager.Instance.GameOverPanelActive(true);
+        UIManager.Instance.UpdateGameOverText();
     }
 
     public void GameRestart()
@@ -87,7 +71,7 @@ public class GameManager : MonoBehaviour
         isgameEnd = false;
         UIManager.Instance.GameOverPanelActive(false);
         Time.timeScale = 1;
-        score = 0;
+        //score = 0;
         SceneManager.LoadScene("WeaponSelectScene");
     }
 }
